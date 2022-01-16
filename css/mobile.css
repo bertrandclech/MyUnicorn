@@ -14,7 +14,8 @@
     font-family: 'PT Sans'; /* Font */
     font-size: 14px; /* Font size */
     color: var(--black);
-    margin: 0;
+/*    width: 90%;
+    margin: 0; */
     text-align: center; /* centered text */
 }
 
@@ -28,14 +29,15 @@
 header nav {
     display: flex;
     justify-content: space-between;
-/*    padding: 10px 15px; */
+    align-items: center;
+/* padding: 10px 15px; */
 }
 
 header nav ul {
     display:flex;
     list-style: none; /* on supprime les puces */
     gap: 30px; /* met un espace entre les éléments du menu nav */
-    align-items: center;
+ /*   align-items: center; */
 }
 
 /* applique un style sur les liens de nav */
