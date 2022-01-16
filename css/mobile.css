@@ -9,17 +9,22 @@
     --font-title: 'Libre Baskerville', serif;
 }
 
-/* define global attributes common to the whole page */
+/* define attributes common to the whole page */
 * {
-    font-family: 'PT Sans'; /* Font */
+    font-family: 'PT Sans', sans-serif; /* Font */
     font-size: 14px; /* Font size */
-    color: var(--black);
-/*    width: 90%;
-    margin: 0; */
+    color: var(--black); /* color black */
     text-align: center; /* centered text */
 }
 
+.container {
+    width: 80%;
+    margin: auto;
+}
 
+.computer {
+    display: none;
+}
 
 /* header part */
 .logo {
@@ -33,63 +38,97 @@ header nav {
 /* padding: 10px 15px; */
 }
 
-header nav ul {
-    display:flex;
-    list-style: none; /* on supprime les puces */
-    gap: 30px; /* met un espace entre les éléments du menu nav */
- /*   align-items: center; */
-}
-
-/* applique un style sur les liens de nav */
-header nav ul li a {
-    text-decoration: none; /* supprime le soulignement */
-    font-size: 0.85rem;
-/*    transition: color 500ms; */
-}
-
 header section h1 {
-    font-family: 'Libre Baskerville';
-    width: 80%;
+    font-family: 'Libre Baskerville', serif;
+ /*   width: 80%; */
     margin: 50px auto 0 auto;
-    font-weight: lighter;
-    font-size: 2.5rem;
+    font-weight: bold;
+    font-size: 2rem;
 
 }
 
+header section img,
+main section img {
+    width: 100%;
+    margin: auto;
+}
+/*
 header section div p {
     width: 80%;
     margin:  20px auto;
 }
-
+*/
 /* main part */
 
-main {
+.imageWhite {
+    filter: brightness(150%);
     width: 80%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.imageRounded {
+    border-radius: 10px;
+}
+/* Une classe pour le bouton tranparent blanc */
+.buttonTranparent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid var(--black);
+}
+
+.buttonBlack {
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#imageSmaller {
+    width: 90%;
     margin: auto;
 }
 
-
+/*
+main section {
+    display: inline-block;
+    position: relative;
+}
+*/
+/*
 main section img {
-    width:100%;
+    position: relative;
 }
-
+*/
+/*
 main section p {
+    width: 40%;
+    position: absolute;
+
 
 }
-
+*/
 main section div h2 {
     font-family: 'Libre Baskerville';
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: left;
+    width: 50%;
 }
 
-main section div a {
-
+main section a {
+    text-decoration: none; /* supprime le soulignement */ 
 }
+
+main section:nth-child(3) {
+    background-color: var(--gray);
+} 
 
 /* footer part */
 footer {
-    width: 80%;
-    margin: auto;
     display: grid;
     text-align: right;
     grid-template-columns: auto auto auto;
@@ -97,5 +136,42 @@ footer {
 }
 .icon {
     border: 2px solid var(--gray-light);
-    padding: 25px 50px;
+    padding: 25px 42px;
 } 
+
+@media (min-width: 1250px) {
+
+    .mobile {
+        display:  none; /* no diplay of the burger icon for computers */
+    }
+
+    .computer {
+        display: block;
+    } 
+
+    .computer {
+        display:flex;
+        list-style: none; /* on supprime les puces */
+        gap: 30px; /* met un espace entre les éléments du menu nav */
+     /*   align-items: center; */
+    }
+    
+    /* applique un style sur les liens de nav */
+    header nav ul li a {
+        text-decoration: none; /* supprime le soulignement */
+        font-size: 0.85rem;
+    /*    transition: color 500ms; */
+    }
+
+    footer {
+        display: inline;
+    /*    text-align: right; */
+        
+    }
+    .icon {
+        border: none;
+        padding: 10px 10px;
+    }
+
+
+}
