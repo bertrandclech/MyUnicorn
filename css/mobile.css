@@ -173,9 +173,11 @@ footer {
     header section h1 {
         font-size: 4rem;
     }
+    /* Image of an unicorn with grey reduced to white */
+    
     .imageWhite {
         width: 40%;
-        bottom: 100px;
+        margin-bottom: 200px;
     }
 
     .imageSmaller {
