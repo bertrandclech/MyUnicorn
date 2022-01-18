@@ -162,6 +162,10 @@ footer {
         justify-content: right;   
     }
 
+    footer a {
+        border: none;
+    }
+
     .icon {
         border: none;
         padding: 10px 10px;
@@ -198,9 +202,10 @@ footer {
         width: 60%;
     }
     .buttonBlack {
-        width: 30%;
+        display: inline;
+    /*    width: 30%;
         margin: auto;
-        padding: 10px 0;
+        padding: 10px 0; */
     }
     
     main section {
@@ -221,5 +226,12 @@ footer {
         left: 40px;
         font-size:1.8rem;
         width: 30%;
+    }
+
+    .newletter {
+        display:flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        padding: 50%;
     }
 }    
